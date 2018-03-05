@@ -1,0 +1,30 @@
+\documentclass[a4paper,10pt,fleqn]{article}
+\usepackage[margin=1in]{geometry}
+%\usepackage{xltxtra}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{unicode-math}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage[inline]{enumitem}
+
+\title{Лекции по численным методам}
+\author{}
+%\date{}
+\setmainfont{Nimbus Roman}
+\setmathfont{texgyretermes-math.otf}
+\setdefaultlanguage{russian}
+
+%\titleformat{\section}{\normalfont\Large\bfseries}{Лекция \thesection}{1em}{}
+\everymath{\displaystyle}
+
+\input{operators}
+\input{environments}
+
+\begin{document}
+	\input{last-minute-style}
+	\maketitle
+\end{document}

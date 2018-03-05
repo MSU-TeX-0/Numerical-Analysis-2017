@@ -1,0 +1,28 @@
+% Inline list
+\newlist{mylist}{enumerate*}{1}
+\setlist[mylist]{label=(\arabic*)}
+
+% Common environments
+\theoremstyle{definition}
+%\theoremstyle{plain}
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{corollary}{Следствие}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Опредение}[section]
+\newtheorem{proposition}{Предложение}[section]
+\newtheorem{example}{Пример}[section]
+\newtheorem{exercise}{Упражнение}[section]
+\newtheorem*{exercise*}{Упражнение*}
+\newtheorem{task}{Задача}[section]
+\theoremstyle{remark}
+\newtheorem*{note}{Замечание}
+
+% Aliases
+\newenvironment{df}{\begin{definition}}{\end{definition}}
+\newenvironment{thm}{\begin{theorem}}{\end{theorem}}
+\newenvironment{rk}{\begin{proposition}}{\end{proposition}}
+\newenvironment{lm}{\begin{lemma}}{\end{lemma}}
+\newenvironment{ex}{\begin{example}}{\end{example}}
+\newenvironment{tk}{\begin{task}}{\end{task}}
+\newenvironment{pf}{\begin{proof}}{\end{proof}}
