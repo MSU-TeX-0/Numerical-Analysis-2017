@@ -5,13 +5,13 @@
 Самый тривиальный метод, какой только можно придумать. Но сходится, только очень медленно.
 
 \subsection{Метод простой итерации}
-Пусть дано уравнение $x = g(x)$, причём $g$ — сжимающее отображение (т. е. $\dist(g(x), g(y)) ≤ q\dist(x, y)$, где $q ∈ \intoo{0, 1}$). Рассмотрим последовательность $x^{n+1} = g(x^n)$ с начальным условием $x^0$. Она сходится к решению уравнения.
+Пусть дано уравнение $x = g(x)$, причём $g$ — сжимающее отображение (т. е. $\dist(g(x), g(y)) \leq q\dist(x, y)$, где $q \in \intoo{0, 1}$). Рассмотрим последовательность $x^{n+1} = g(x^n)$ с начальным условием $x^0$. Она сходится к решению уравнения.
 \begin{proof}
-	\[ \dist(x^{n+p}, x^n) ≤ q \dist(x^{n+p-1}, x^{n-1}) ≤ \dotsb ≤ q^n \dist(x^p, x^0) \]
+	\[ \dist(x^{n+p}, x^n) \leq q \dist(x^{n+p-1}, x^{n-1}) \leq \dotsb \leq q^n \dist(x^p, x^0) \]
 	По неравенству треугольника
-	\[ \dist(x^p, x^0) ≤ \dist(x^p, x^{p-1}) + \dotsb + \dist(x^1, x^0) ≤ q^p + \dotsb q^0 ≤ \frac{1}{1 - q} \]
+	\[ \dist(x^p, x^0) \leq \dist(x^p, x^{p-1}) + \dotsb + \dist(x^1, x^0) \leq q^p + \dotsb q^0 \leq \frac{1}{1 - q} \]
 	Тогда
-	\[ \dist(x^{n+p}, x^n) ≤ \frac{q^n}{1 - q} \]
+	\[ \dist(x^{n+p}, x^n) \leq \frac{q^n}{1 - q} \]
 	и по критерию Коши последовательность имеет предел $x$. Очевидно $g(x) = x$.
 \end{proof}
 
@@ -25,19 +25,19 @@
 
 \begin{theorem}
 	Пусть $F(\bar x) = 0$, и в $U_a(\bar x)$ выполнено:\begin{enumerate}
-		\item $\norm{F'(x)^{-1}} ≤ a_1$
-		\item $\norm{F(x) - F(y) - F'(y)(x - y)} ≤ a_2 \norm{x - y}^2$
+		\item $\norm{F'(x)^{-1}} \leq a_1$
+		\item $\norm{F(x) - F(y) - F'(y)(x - y)} \leq a_2 \norm{x - y}^2$
 	\end{enumerate}
-	Тогда существует окрестность $U_b(\bar x)$, такая, что если $x^0 ∈ U_b(\bar x)$, то метод сходится.
+	Тогда существует окрестность $U_b(\bar x)$, такая, что если $x^0 \in U_b(\bar x)$, то метод сходится.
 \end{theorem}
 \begin{proof}
 	\begin{gather*}
 		F'(x^n)(x^{n + 1} - \bar x) = F'(x^n) (x^{n + 1}) - x^n) + F'(x^n) (x^n - \bar x) = -F(x^n) + F'(x^n) (x^n - \bar x) \\
 		x^{n+1} - \bar x = F'(x^n)^{-1} \left(F(\bar x) - F(x^n) + F'(x^n) (x^n - \bar x)\right) \\
-		\norm{x^{n+1} - \bar x} ≤ \norm{F'(x^n)^{-1} (F(\bar x) - F(x^n) - F'(x^n) (\bar x - x^n)} ≤ a_1 a_2 \norm{\bar x - x^n}^2
+		\norm{x^{n+1} - \bar x} \leq \norm{F'(x^n)^{-1} (F(\bar x) - F(x^n) - F'(x^n) (\bar x - x^n)} \leq a_1 a_2 \norm{\bar x - x^n}^2
 	\end{gather*}
 	Пусть $b < a$, $b < \frac{1}{a_1 a_2}$. Тогда:
-	\[ a_1 a_2 \norm{x^{n+1} - \bar x} ≤ \left(a_1 a_2 \norm{x^{n} - \bar x} \right)^2 ≤ \dotsb ≤ \left(a_1 a_2 \norm{x^{n} - \bar x} \right)^{2^n} < q^{2^n} \]
+	\[ a_1 a_2 \norm{x^{n+1} - \bar x} \leq \left(a_1 a_2 \norm{x^{n} - \bar x} \right)^2 \leq \dotsb \leq \left(a_1 a_2 \norm{x^{n} - \bar x} \right)^{2^n} < q^{2^n} \]
 	Таким образом, метод сходится, причём очень быстро. Такая сходимость называется суперсходимостью.
 \end{proof}
 
@@ -46,7 +46,7 @@
 	Задача — решить уравнение $x^2 - 2 = 0$. Применим метод Ньютона:
 	\[ x_{n+1} = x_n - \frac{x_n^2 - 2}{2 x_n} \,,\quad x_0 = 1.5 \]
 	Имеем:
-	\[ x_0 = 1.5,\, x_1 = 1.41\overbar{6}, x_2 = 1.4142156862\dotso \]
+	\[ x_0 = 1.5,\, x_1 = 1.41\overline{6}, x_2 = 1.4142156862\dotso \]
 	То есть уже после 2 итераций получили 5 верных знаков после запятой.
 \end{example}
 

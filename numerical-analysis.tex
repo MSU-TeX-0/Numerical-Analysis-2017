@@ -1,22 +1,47 @@
 \documentclass[a4paper,10pt,fleqn]{article}
 \usepackage[margin=1in]{geometry}
-%\usepackage{xltxtra}
+\ifxetex
 \usepackage{fontspec}
 \usepackage{polyglossia}
+\else
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\fi
 \usepackage{mathtools}
 \usepackage{commath}
+\usepackage{amscd,amsfonts,amssymb,amsthm}
+\ifxetex
 \usepackage{unicode-math}
-\usepackage{amsthm}
+\fi
+%\usepackage{booktabs,multirow}
+\usepackage{calc}
+\usepackage{empheq}
+\usepackage[inline]{enumitem}
+\usepackage{framed}
 \usepackage{graphicx}
 \usepackage{titlesec}
-\usepackage[inline]{enumitem}
+\usepackage[space]{grffile}
+\usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{setspace}
+\usepackage[most]{tcolorbox}
+\usepackage{xcolor}
+%\usepackage[table]{xcolor}
+%\usepackage{fancyhdr}
+%\usepackage{mathrsfs}
+%\usepackage{wrapfig}
+%\usepackage{multicol}
+%\usepackage{cancel}
 
 \title{Лекции по численным методам}
 \author{}
 %\date{}
+\ifxetex
 \setmainfont{Nimbus Roman}
 \setmathfont{texgyretermes-math.otf}
 \setdefaultlanguage{russian}
+\fi
 
 \everymath{\displaystyle}
 
