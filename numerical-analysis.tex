@@ -43,7 +43,21 @@
 \setdefaultlanguage{russian}
 \fi
 
+\newcounter{lecture}
+\newcommand{\lecture}[1]{{
+	\stepcounter{lecture}
+	\raggedleft{} \itshape
+	Лекция \arabic{lecture} (#1)
+	\hrule}}
+
 \everymath{\displaystyle}
+\hypersetup{
+	colorlinks,
+	citecolor=green,
+	filecolor=red,
+	linkcolor=red,
+	urlcolor=blue
+}
 
 \input{include/operators}
 \input{include/environments}
@@ -51,6 +65,8 @@
 \begin{document}
 	\input{include/last-minute-style}
 	\maketitle
-	\input{src/lecture01.tex}
-	\input{src/lecture02.tex}
+	\tableofcontents
+	\pagebreak
+	\input{src/lecture01.tex} % 2018-02-12 / [numberZero]
+	\input{src/lecture02.tex} % 2018-02-19 / [arvego]
 \end{document}
