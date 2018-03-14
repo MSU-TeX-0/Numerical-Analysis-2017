@@ -1,33 +1,4 @@
-\documentclass[a4paper,10pt,fleqn]{article}
-\usepackage[margin=1in]{geometry}
-%\usepackage{xltxtra}
-\usepackage{fontspec}
-\usepackage{polyglossia}
-\usepackage{mathtools}
-\usepackage{commath}
-\usepackage{unicode-math}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage[inline]{enumitem}
-
-\title{Лекции по численным методам}
-\author{}
-%\date{}
-\setmainfont{Nimbus Roman}
-\setmathfont{texgyretermes-math.otf}
-\setdefaultlanguage{russian}
-
-%\titleformat{\section}{\normalfont\Large\bfseries}{Лекция \thesection}{1em}{}
-\everymath{\displaystyle}
-
-\input{operators}
-\input{environments}
-
-\begin{document}
-	\input{last-minute-style}
-	\maketitle
-
+% 2018-02-12
 \section{Решение нелинейных уравнений}
 
 \subsection{Деление отрезка пополам}
@@ -45,7 +16,7 @@
 \end{proof}
 
 \subsection{Метод Ньютона}
-Пусть $F(x) = 0$ — система $m$ уравнений с $m$ неизвестными, а $\bar x$ — её корень. Тогда:
+Пусть $F(x) = 0$ — система $m$ уравнений с $m$ неизвестными, а $\bar x$ — её корень. Тогда:
 \[ 0 = F(\bar x) = F(x) + F'(x) (\bar x - x) + o(\bar x) \]
 Соответствующий итерационный процесс:
 \[ F'(x^n)(x^{n+1} - x^n) + F(x^n) = 0 \]
@@ -79,9 +50,9 @@
 	То есть уже после 2 итераций получили 5 верных знаков после запятой.
 \end{example}
 
-\section{Численные методы решения задачи Коши для системы ОДУ}
 \begin{example} Дифференциальное уравнение: $-u'' + u^3 = f(x)$, $u(0) = u(1) = 0$
-	TODO
+% TODO
 \end{example}
 
-\end{document}
+\section{Численные методы решения задачи Коши для системы ОДУ}
+% TODO

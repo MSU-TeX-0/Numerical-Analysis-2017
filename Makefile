@@ -1,9 +1,12 @@
-all: nm.pdf
+NAME=numerical-analysis
+LATEX=xelatex
+
+all: $(NAME).pdf
 
 clean:
 	rm -f *.pdf *.aux *.bbl *.blg *.log *.synctex.*
 
-nm.pdf: *.tex
-	xelatex nm.tex
+$(NAME).pdf: *.tex src/*.tex include/*.tex
+	$(LATEX) $(NAME).tex
 
 .PHONY: clean all
