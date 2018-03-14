@@ -8,6 +8,7 @@
 \newtheorem{lemma}{Лемма}[section]
 \newtheorem{theorem}{Теорема}[section]
 \newtheorem{corollary}{Следствие}[section]
+
 \theoremstyle{definition}
 \newtheorem{definition}{Опредение}[section]
 \newtheorem{proposition}{Предложение}[section]
@@ -15,8 +16,11 @@
 \newtheorem{exercise}{Упражнение}[section]
 \newtheorem*{exercise*}{Упражнение*}
 \newtheorem{task}{Задача}[section]
+
 \theoremstyle{remark}
 \newtheorem*{note}{Замечание}
+
+\newenvironment{solution}{\begin{proof}[Решение]}{\end{proof}}
 
 % Aliases
 \newenvironment{df}{\begin{definition}}{\end{definition}}
@@ -26,3 +30,7 @@
 \newenvironment{ex}{\begin{example}}{\end{example}}
 \newenvironment{tk}{\begin{task}}{\end{task}}
 \newenvironment{pf}{\begin{proof}}{\end{proof}}
+\newenvironment{sol}{\begin{solution}}{\end{solution}}
+
+% Miscellaneous settings
+\renewcommand{\qedsymbol}{$\blacksquare$}
